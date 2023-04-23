@@ -1,0 +1,36 @@
+<app-nav-menu></app-nav-menu>
+<div class="text-center mt-3">
+  <h1>Login</h1>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4 mt-3">
+      <form (ngSubmit)="login()" [formGroup]="fromLogin">
+        <label>Email</label>
+        <input
+          formControlName="email"
+          class="form-control"
+          type="email"
+          placeholder="Email"
+        /><br />
+        <label>Password</label>
+        <input
+          formControlName="pass"
+          class="form-control"
+          type="password"
+          placeholder="Password"
+        /><br />
+
+        <br />
+        <button
+          type="submit"
+          class="btn btn-danger"
+          [disabled]="fromLogin.invalid"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

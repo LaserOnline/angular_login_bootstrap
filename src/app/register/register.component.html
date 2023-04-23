@@ -1,0 +1,33 @@
+<app-nav-menu></app-nav-menu>
+<div class="text-center">
+  <h3>Register</h3>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4 mt-3">
+      <form (ngSubmit)="register()" [formGroup]="fromRegister">
+        <label>Email</label>
+        <input
+          formControlName="email"
+          class="form-control"
+          type="email"
+          placeholder="Email"
+        /><br />
+        <label>Password</label>
+        <input
+          formControlName="pass"
+          class="form-control"
+          type="password"
+          placeholder="Password"
+        /><br />
+        <button
+          type="submit"
+          class="btn btn-danger"
+          [disabled]="fromRegister.invalid"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
